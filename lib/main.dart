@@ -1,4 +1,4 @@
-import 'package:expenses_accounting_app/chart.dart';
+import 'package:expenses_accounting_app/chart_container.dart';
 import 'package:expenses_accounting_app/transaction.dart';
 import 'package:expenses_accounting_app/transaction_item.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +30,7 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Chart(),
+          ChartContainer(),
           TransactionItem(transactions),
         ],
       ),

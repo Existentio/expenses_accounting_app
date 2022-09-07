@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation_progress_bar/flutter_animation_progress_bar.dart';
 
 class Chart extends StatelessWidget {
-  Chart();
-
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      margin: EdgeInsets.all(16),
-      child: Card(
-        child: Column(
-          children: [Text('yo'), LinearProgressIndicator(
-
-          )],
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Text('zzz'),
+        RotatedBox(
+          quarterTurns: 1,
+          child: FAProgressBar(
+            direction: Axis.vertical,
+            currentValue: 22,
+            displayText: '%',
+          ),
         ),
-        elevation: 6,
-      ),
+        Text('xxx'),
+      ],
     );
   }
 }

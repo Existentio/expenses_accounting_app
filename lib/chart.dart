@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animation_progress_bar/flutter_animation_progress_bar.dart';
 
 class Chart extends StatelessWidget {
-  final double currentValue;
+  final double progressValue;
 
-  Chart(this.currentValue);
+  Chart(this.progressValue);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class Chart extends StatelessWidget {
           child: FAProgressBar(
             direction: Axis.vertical,
             verticalDirection: VerticalDirection.down,
-            currentValue: currentValue,
+            currentValue: progressValue,
           ),
         ),
         Text('xxx'),

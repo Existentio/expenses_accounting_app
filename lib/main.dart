@@ -28,7 +28,7 @@ class MyHomePage extends StatelessWidget {
         title: Text('Personal Expenses'),
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        // crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           ChartContainer(),
           TransactionItem(transactions),

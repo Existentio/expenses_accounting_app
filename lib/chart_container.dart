@@ -4,13 +4,18 @@ import 'package:flutter/material.dart';
 class ChartContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(16),
-      child: Column(
+    return Card(
+      margin: EdgeInsets.all(20),
+      elevation: 8,
+      child: Row(
         children: [
-          Chart(),
-          Chart(),
-
+          Chart(22),
+          Chart(33),
+          Chart(33),
+          Chart(5),
+          Chart(77),
+          Chart(88),
+          Chart(99),
         ],
       ),
     );

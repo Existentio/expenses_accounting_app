@@ -1,5 +1,6 @@
 import 'package:expenses_accounting_app/chart.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class ChartContainer extends StatelessWidget {
   @override
@@ -9,13 +10,59 @@ class ChartContainer extends StatelessWidget {
       elevation: 8,
       child: Row(
         children: [
-          Chart(22),
-          Chart(33),
-          Chart(33),
-          Chart(5),
-          Chart(77),
-          Chart(88),
-          Chart(99),
+          Chart(
+            expenses: 2,
+            progressValue: 22,
+            date: DateFormat.MMMd().format(
+              DateTime.now(),
+            ),
+          ),
+          Chart(
+            expenses: 2,
+            progressValue: 33,
+            date: DateFormat.MMMd().format(
+              DateTime.now(),
+            ),
+          ),
+          Chart(
+            expenses: 2,
+            progressValue: 44,
+            date: DateFormat.MMMd().format(
+              DateTime.now(),
+            ),
+          ),
+          Chart(
+            expenses: 2,
+            progressValue: 33,
+            date: DateFormat.MMMd().format(
+              DateTime.now(),
+            ),
+          ),
+          Chart(
+            expenses: 2,
+            progressValue: 11,
+            date: DateFormat.MMMd().format(
+              DateTime.now(),
+            ),
+          ),
+          Chart(
+            expenses: 2,
+            progressValue: 44,
+            date: DateFormat.MMMd().format(
+              DateTime.now(),
+            ),
+          ),
+          Chart(
+            expenses: 2,
+            progressValue: 55,
+            date: DateFormat.MMMd().format(
+              DateTime.now(),
+            ),
+          ),
+
+
+
+
         ],
       ),
     );

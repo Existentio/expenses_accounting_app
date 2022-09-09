@@ -15,7 +15,12 @@ class Chart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(progressValue.toString()),
+        Container(
+          margin: EdgeInsets.all(4),
+          child: Text(
+            expenses.toString(),
+          ),
+        ),
         Container(
           width: 20,
           margin: EdgeInsets.all(10),

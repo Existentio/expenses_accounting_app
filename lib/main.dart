@@ -17,11 +17,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatelessWidget {
   final List<Transaction> transactions = [
-    Transaction(
-        id: 't1',
-        title: 'item 1',
-        amount: 69.99,
-        date: DateTime.now()),
+    Transaction(id: 't1', title: 'item 1', amount: 69.99, date: DateTime.now()),
     Transaction(id: 't2', title: 'item 2', amount: 16.99, date: DateTime.now())
   ];
 
@@ -34,7 +30,11 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         // crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          ChartContainer(),
+          SingleChildScrollView(
+            child:  ChartContainer(),
+            scrollDirection: Axis.horizontal,
+          )
+         ,
           TransactionItem(transactions),
         ],
       ),

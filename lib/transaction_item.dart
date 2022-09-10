@@ -18,6 +18,9 @@ class TransactionItem extends StatelessWidget {
                 margin: EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 10,
+
+
+
                 ),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,

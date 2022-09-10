@@ -19,12 +19,6 @@ class TransactionItem extends StatelessWidget {
                   horizontal: 10,
                 ),
                 child: Text(tx.amount.toString()),
-
-                padding: const EdgeInsets.all(20.0),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.cyan,
-                ),
               ),
               Column(children: <Widget>[
                 Container(

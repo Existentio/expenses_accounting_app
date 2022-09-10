@@ -21,7 +21,7 @@ class TransactionItem extends StatelessWidget {
                 ),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.cyan,
+                  color: Colors.cyan
                 ),
                 child: Text(tx.amount.toString()),
               ),

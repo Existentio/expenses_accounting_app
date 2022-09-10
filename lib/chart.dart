@@ -11,7 +11,6 @@ class Chart extends StatelessWidget {
       required this.progressValue,
       required this.date});
 
-
   @override
   Widget build(BuildContext context) {
     return Column(

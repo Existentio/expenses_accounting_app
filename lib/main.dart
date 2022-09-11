@@ -17,18 +17,17 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatelessWidget {
   final List<Transaction> transactions = [
-    Transaction(id: 't1', title: 'item 1', amount: 69.99, date: DateTime.now()),
+    Transaction(id: 't1', title: 'item 1', amount: 611111.99, date: DateTime.now()),
     Transaction(id: 't2', title: 'item 2', amount: 16.99, date: DateTime.now())
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Personal Expenses'),
-      ),
+      // appBar: AppBar(
+      //   title: Text('Personal Expenses'),
+      // ),
       body: Column(
-        // crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           SingleChildScrollView(
             child:  ChartContainer(),

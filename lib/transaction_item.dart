@@ -14,7 +14,7 @@ class TransactionItem extends StatelessWidget {
           child: Row(
             children: <Widget>[
               Container(
-                padding: const EdgeInsets.all(24.0),
+                padding: const EdgeInsets.all(24),
                 margin: EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 10,
@@ -23,7 +23,10 @@ class TransactionItem extends StatelessWidget {
                   shape: BoxShape.circle,
                   color: Colors.blue,
                 ),
-                child: Text(tx.amount.toString()),
+                child: Text(
+                  tx.amount.toString(),
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
               Column(children: <Widget>[
                 Container(
@@ -40,7 +43,8 @@ class TransactionItem extends StatelessWidget {
                     tx.date.day.toString() +
                     ", " +
                     tx.date.year.toString())
-              ])
+              ]),
+               Text('sssssss', textAlign: TextAlign.end),
             ],
           ),
         );

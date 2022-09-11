@@ -14,20 +14,25 @@ class TransactionItem extends StatelessWidget {
           child: Row(
             children: <Widget>[
               Container(
-                padding: const EdgeInsets.all(24),
-                margin: EdgeInsets.symmetric(
-                  vertical: 10,
-                  horizontal: 10,
-                ),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.blue,
-                ),
-                child: Text(
-                  tx.amount.toString(),
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
+                  padding: const EdgeInsets.all(6),
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 10,
+                  ),
+                  child: Container(
+                    width: 70,
+                    height: 70,
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.all(6),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.blue,
+                    ),
+                    child: Text(
+                      tx.amount.toString(),
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )),
               Column(children: <Widget>[
                 Container(
                   child: Text(
@@ -44,7 +49,12 @@ class TransactionItem extends StatelessWidget {
                     ", " +
                     tx.date.year.toString())
               ]),
-               Text('sssssss', textAlign: TextAlign.end),
+              Container(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'sssssss',
+                    textAlign: TextAlign.end,
+                  )),
             ],
           ),
         );

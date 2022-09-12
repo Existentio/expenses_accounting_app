@@ -21,9 +21,33 @@ class MyHomePage extends StatelessWidget {
     Transaction(
         id: 't1',
         title: 'item 1',
-        amount: 611111111111.99,
+        amount: 611111111111,
         date: DateTime.now()),
-    Transaction(id: 't2', title: 'item 2', amount: 16.99, date: DateTime.now())
+    Transaction(
+        id: 't2',
+        title: 'item 2',
+        amount: 2424,
+        date: DateTime.now()),
+    Transaction(
+        id: 't1',
+        title: 'item 1',
+        amount: 611111111111,
+        date: DateTime.now()),
+    Transaction(
+        id: 't2',
+        title: 'item 2',
+        amount: 611111111111,
+        date: DateTime.now()),
+    Transaction(
+        id: 't1',
+        title: 'item 1',
+        amount: 611111111111,
+        date: DateTime.now()),
+    Transaction(
+        id: 't2',
+        title: 'item 2',
+        amount: 611111111111,
+        date: DateTime.now())
   ];
 
   @override

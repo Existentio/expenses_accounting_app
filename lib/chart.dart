@@ -3,7 +3,7 @@ import 'package:flutter_animation_progress_bar/flutter_animation_progress_bar.da
 
 class Chart extends StatelessWidget {
   final double progressValue;
-  final double expenses;
+  final int expenses;
   final String date;
 
   Chart({

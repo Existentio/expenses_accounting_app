@@ -6,10 +6,11 @@ class Chart extends StatelessWidget {
   final double expenses;
   final String date;
 
-  Chart(
-      {required this.expenses,
-      required this.progressValue,
-      required this.date});
+  Chart({
+    required this.expenses,
+    required this.progressValue,
+    required this.date,
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -8,57 +8,63 @@ class TransactionItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: transactions.map((tx) {
-        return Card(
-          child: Row(
-            children: <Widget>[
-              Container(
-                  padding: const EdgeInsets.all(6),
-                  margin: EdgeInsets.symmetric(
-                    vertical: 10,
-                    horizontal: 10,
-                  ),
-                  child: Container(
-                    width: 70,
-                    height: 70,
-                    alignment: Alignment.center,
-                    padding: EdgeInsets.all(6),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.blue,
-                    ),
-                    child: Text(
-                      tx.amount.toString(),
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  )),
-              Column(children: <Widget>[
+    return Expanded(
+      child: ListView.builder(
+        // shrinkWrap: true,
+        itemCount: transactions.length,
+        // prototypeItem: ListTile(
+        //   title: Text(transactions.first.title.toString()),
+        // ),
+        // prototypeItem: ListView(
+        //    child: Text(transactions.first.title)
+        // ),
+        itemBuilder: (context, index) {
+          return Card(
+            child: Row(
+              children: <Widget>[
                 Container(
-                  child: Text(
-                    tx.title.toString(),
-                  ),
-                  margin: EdgeInsets.symmetric(
-                    vertical: 10,
-                    horizontal: 10,
-                  ),
+                    padding: const EdgeInsets.all(6),
+                    margin: EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: 10,
+                    ),
+                    child: Container(
+                      width: 70,
+                      height: 70,
+                      alignment: Alignment.center,
+                      padding: EdgeInsets.all(6),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.blue,
+                      ),
+                      child: Text(
+                        transactions[index].amount.toString(),
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    )),
+                Expanded(
+                  child: Column(children: <Widget>[
+                    Container(
+                      child: Text(transactions[index].title),
+                      margin: EdgeInsets.symmetric(
+                        vertical: 10,
+                        horizontal: 10,
+                      ),
+                    ),
+                    Text(transactions[index].date.toString())
+                  ]),
                 ),
-                Text(tx.date.month.toString() +
-                    " " +
-                    tx.date.day.toString() +
-                    ", " +
-                    tx.date.year.toString())
-              ]),
-              Container(
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'sssssss',
-                    textAlign: TextAlign.end,
-                  )),
-            ],
-          ),
-        );
-      }).toList(),
+                Container(
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'sssssss',
+                      textAlign: TextAlign.end,
+                    )),
+              ],
+            ),
+          );
+        },
+      ),
     );
   }
 }

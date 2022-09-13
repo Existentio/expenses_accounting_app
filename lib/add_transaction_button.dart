@@ -6,6 +6,7 @@ class AddTransactionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.bottomRight,
       child: FloatingActionButton(
         child: Text('+'),
         onPressed: null,

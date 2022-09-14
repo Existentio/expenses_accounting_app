@@ -12,12 +12,6 @@ class TransactionItem extends StatelessWidget {
       child: ListView.builder(
         // shrinkWrap: true,
         itemCount: transactions.length,
-        // prototypeItem: ListTile(
-        //   title: Text(transactions.first.title.toString()),
-        // ),
-        // prototypeItem: ListView(
-        //    child: Text(transactions.first.title)
-        // ),
         itemBuilder: (context, index) {
           return Card(
             child: Row(

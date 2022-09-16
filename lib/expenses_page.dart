@@ -1,3 +1,4 @@
+import 'package:expenses_accounting_app/bottom_action_sheet.dart';
 import 'package:expenses_accounting_app/chart_container.dart';
 import 'package:expenses_accounting_app/transaction.dart';
 import 'package:expenses_accounting_app/transaction_item.dart';
@@ -28,7 +29,29 @@ class ExpensesPage extends StatelessWidget {
             icon: const Icon(Icons.add),
             tooltip: 'Add expense',
             onPressed: () {
-              // handle the press
+              showModalBottomSheet<void>(
+                context: context,
+                builder: (BuildContext context) {
+                  return Container(
+                    height: 200,
+                    color: Colors.amber,
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          const Text('Modal BottomSheet'),
+                          ElevatedButton(
+                            child: const Text('Close BottomSheet'),
+                            onPressed: () => Navigator.pop(context),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              );
+
             },
           )
         ],

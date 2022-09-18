@@ -51,7 +51,7 @@ class TransactionItem extends StatelessWidget {
                 Container(
                     alignment: Alignment.centerRight,
                     child: Text(
-                      'sssssss',
+                      'test',
                       textAlign: TextAlign.end,
                     )),
               ],

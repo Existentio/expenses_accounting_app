@@ -1,4 +1,3 @@
-import 'package:expenses_accounting_app/bottom_action_sheet.dart';
 import 'package:expenses_accounting_app/chart_container.dart';
 import 'package:expenses_accounting_app/transaction.dart';
 import 'package:expenses_accounting_app/transaction_item.dart';
@@ -7,16 +6,16 @@ import 'package:flutter/material.dart';
 class ExpensesPage extends StatelessWidget {
   final List<Transaction> transactions = [
     Transaction(
-        id: 't1', title: 'item 1', amount: 611111111111, date: DateTime.now()),
-    Transaction(id: 't2', title: 'item 2', amount: 3232, date: DateTime.now()),
+        id: 't1', title: 'item 1', amount: 11111111111, date: DateTime.now()),
+    Transaction(id: 't2', title: 'item 2', amount: 11111111111, date: DateTime.now()),
     Transaction(
-        id: 't1', title: 'item 1', amount: 611111111111, date: DateTime.now()),
+        id: 't3', title: 'item 1', amount: 11111111111, date: DateTime.now()),
     Transaction(
-        id: 't2', title: 'item 2', amount: 611111111111, date: DateTime.now()),
+        id: 't4', title: 'item 2', amount: 11111111111, date: DateTime.now()),
     Transaction(
-        id: 't1', title: 'item 1', amount: 611111111111, date: DateTime.now()),
+        id: 't5', title: 'item 1', amount: 11111111111, date: DateTime.now()),
     Transaction(
-        id: 't2', title: 'item 2', amount: 611111111111, date: DateTime.now())
+        id: 't6', title: 'item 2', amount: 11111111111, date: DateTime.now())
   ];
 
   @override
@@ -29,18 +28,30 @@ class ExpensesPage extends StatelessWidget {
             icon: const Icon(Icons.add),
             tooltip: 'Add expense',
             onPressed: () {
-              showModalBottomSheet<void>(
+              showModalBottomSheet(
                 context: context,
                 builder: (BuildContext context) {
                   return Container(
-                    height: 200,
-                    color: Colors.amber,
+                    height: 500,
+                    color: Colors.white,
+                    padding: EdgeInsets.all(10),
+
                     child: Center(
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
-                          const Text('Modal BottomSheet'),
+                          TextField(
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              hintText: 'Title',
+                            ),
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              hintText: 'Amount',
+                            ),
+                          ),
                           ElevatedButton(
                             child: const Text('Close BottomSheet'),
                             onPressed: () => Navigator.pop(context),
